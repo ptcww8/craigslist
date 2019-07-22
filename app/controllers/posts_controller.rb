@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:show]
+	skip_before_action :deny_access
 
 
   # GET /posts
