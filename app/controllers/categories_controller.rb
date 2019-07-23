@@ -11,6 +11,11 @@ class CategoriesController < ApplicationController
   # GET /categories/1.json
   def show
   end
+	
+	def show_posts
+		@posts =  @category.posts
+		
+	end
 
   # GET /categories/new
   def new

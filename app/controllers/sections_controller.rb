@@ -7,6 +7,7 @@ class SectionsController < ApplicationController
   # GET /sections.json
   def index
     @sections = Section.all
+		@cities = City.all
   end
 
   # GET /sections/1
@@ -26,6 +27,10 @@ class SectionsController < ApplicationController
 	def show_categories
 		render json: @section.categories
 		
+	end
+	
+	def show_posts
+		render json: @section.categories	
 	end
 
   # POST /sections
