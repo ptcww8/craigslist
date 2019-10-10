@@ -11,6 +11,11 @@ class CategoriesController < ApplicationController
   # GET /categories/1.json
   def show
   end
+	
+	def show_posts
+		@posts =  @category.posts
+		
+	end
 
   # GET /categories/new
   def new
@@ -71,4 +76,6 @@ class CategoriesController < ApplicationController
     def category_params
       params.require(:category).permit(:name, :section_id)
     end
+	
+
 end
